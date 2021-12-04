@@ -28,4 +28,7 @@ router.get('/blog', function(req, res, next) {
 router.get('/blogdetail', function(req, res, next) {
     res.render('DetailBlog.handlebars')
 })
+router.get('/invidual', function(req, res, next) {
+    res.render('Invidual.handlebars')
+})
 module.exports = router;

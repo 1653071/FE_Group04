@@ -576,3 +576,20 @@ a {
     font-size: 22px;
     font-weight: 700;
 }
+/****Invidual*******/
+.invidual{
+    display: flex;
+    padding-top: 50px;
+}
+.invidual .avatar{
+    width: 30%;
+}
+.invidual .info{
+    width: 70%;
+}
+.invidual .info .head-title{
+    font-size: 20px;
+    font-weight: 700;
+}
+  
+  
