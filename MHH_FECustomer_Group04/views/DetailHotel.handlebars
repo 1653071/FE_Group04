@@ -1,11 +1,13 @@
-<div class="container-fluid">
+<div class="container-fluid detail ">
   <div>
     <img
       src="https://pearlriverhotel.vn/wp-content/uploads/2019/07/pearl-river-hotel-home1.jpg"
       class="detail-image"
+      height="800"
     />
   </div>
-  <div class="tab-wrapper">
+  <div class="detail-container">
+    <div class="tab-wrapper">
     <nav id="navbar-example2" class="nav-scroll navbar-light px-3">
 
       <ul class="nav nav-pills">
@@ -25,19 +27,10 @@
       class="scrollspy-example"
       tabindex="0"
     >
-      <h4 id="scrollspyHeading1">Awesome Cotton Chicken</h4>
-      <p>In South Williamsburg only a few blocks inland from the East River,
-        Marlo &Sons is a rustic respite with nice wine, good cocktails, and
-        excellent snacking fare such as oysters, local cheese, and potato
-        tortilla. But thereâ€™s more: seasonal salads and soups, the famous
-        brick chicken, a dimly lit space outfitted in various types of wood(this
-        is an Andrew Tarlow restaurant, after all). In many ways.</p>
+      <h4 id="scrollspyHeading1">{{product.name}}</h4>
+      <p>{{product.description}}</p>
       <h4 id="scrollspyHeading2">Location</h4>
-      <p>Take an easy walk to the main historic sites of the city. The
-        neighborhood is perfect for an authentic taste of Roman life, with
-        shops, art galleries, restaurants, bars, and clubs all nearby and ready
-        to be discovered. Distance from Leonardo da Vinci International Airport
-        26 mins by car without traffic</p>
+      <p>{{product.address}}</p>
       <h4 id="scrollspyHeading3">Review</h4>
       <div class="comment-card card">
         <div class="row">
@@ -142,8 +135,9 @@
         </select>
       </div>
       <div class="card-footer">
-          <button class="book-button">Book</button>
+          <button class="book-button" href="/hotel/booking">Book</button>
       </div>
     </div>
+  </div>
   </div>
 </div>

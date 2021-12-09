@@ -9,7 +9,7 @@
       width="48px"
     />
     <select class="form-select" aria-label="Default select example">
-      <option selected>People</option>
+      <option selected>Search</option>
       <option value="1">1 people</option>
       <option value="2">2 people</option>
       <option value="3">3 people</option>
@@ -21,26 +21,27 @@
 <div class="content-wrapper">
   <div class="filter-wrapper">
     <ul class="list-group">
-      <li class="list-group-item">Categories</li>
+      <li class="list-group-item" >Categories</li>
       <li class="list-group-item">Hotel</li>
       <li class="list-group-item">Resort</li>
-      <li class="list-group-item">Villa</li>
+      <button class="list-group-item" onclick="filterSelection('villa')">Villa</button>
       <li class="list-group-item">PenHouse</li>
     </ul>
   </div>
   <div class="hotel-wrapper">
-    <div class="container-fluid">
+    {{#if listExists}} 
+   
+    {{#each products}}
+     <div class="container-fluid hotel-card {{this.type}}" href="/hotel/{{this.id}}">
       <div class="card">
         <div class="row">
           <div class="col-4">
-            <img src="..." class="img-fluid rounded-start" alt="..." />
+            <img src={{this.picture}} class="img-fluid rounded-start" height="400" alt="..." />
           </div>
           <div class="col-8">
             <div class="card-body">
-              <h5 class="card-title">Card title</h5>
-              <p class="card-text">This is a wider card with supporting text
-                below as a natural lead-in to additional content. This content
-                is a little bit longer.</p>
+              <h5 class="card-title">{{this.name}}</h5>
+              <p class="card-text">{{this.description}}</p>
               <p class="card-text"><small class="text-muted">Last updated 3 mins
                   ago</small></p>
             </div>
@@ -49,228 +50,16 @@
         </div>
       </div>
     </div>
-    <div class="container-fluid">
-      <div class="card">
-        <div class="row">
-          <div class="col-4">
-            <img
-              src="https://cf.bstatic.com/xdata/images/hotel/square200/98439178.webp?k=ea15bd84b76d4f739642ff102c8b7beacc868dbdd98dbc1b5b061408aff83fbc&o="
-              class="img-fluid rounded-start"
-              alt="..."
-            />
-          </div>
-          <div class="col-8">
-            <div class="card-body">
-              <h5 class="card-title">Card title</h5>
-              <p class="card-text">This is a wider card with supporting text
-                below as a natural lead-in to additional content. This content
-                is a little bit longer.</p>
-              <p class="card-text"><small class="text-muted">Last updated 3 mins
-                  ago</small></p>
-            </div>
-
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="container-fluid">
-      <div class="card">
-        <div class="row">
-          <div class="col-4">
-            <img
-              src="https://cf.bstatic.com/xdata/images/hotel/square200/98439178.webp?k=ea15bd84b76d4f739642ff102c8b7beacc868dbdd98dbc1b5b061408aff83fbc&o="
-              class="img-fluid rounded-start"
-              alt="..."
-            />
-          </div>
-          <div class="col-8">
-            <div class="card-body">
-              <h5 class="card-title">Card title</h5>
-              <p class="card-text">This is a wider card with supporting text
-                below as a natural lead-in to additional content. This content
-                is a little bit longer.</p>
-              <p class="card-text"><small class="text-muted">Last updated 3 mins
-                  ago</small></p>
-            </div>
-
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="container-fluid">
-      <div class="card">
-        <div class="row">
-          <div class="col-4">
-            <img
-              src="https://cf.bstatic.com/xdata/images/hotel/square200/98439178.webp?k=ea15bd84b76d4f739642ff102c8b7beacc868dbdd98dbc1b5b061408aff83fbc&o="
-              class="img-fluid rounded-start"
-              alt="..."
-            />
-          </div>
-          <div class="col-8">
-            <div class="card-body">
-              <h5 class="card-title">Card title</h5>
-              <p class="card-text">This is a wider card with supporting text
-                below as a natural lead-in to additional content. This content
-                is a little bit longer.</p>
-              <p class="card-text"><small class="text-muted">Last updated 3 mins
-                  ago</small></p>
-            </div>
-
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="container-fluid">
-      <div class="card">
-        <div class="row">
-          <div class="col-4">
-            <img
-              src="https://cf.bstatic.com/xdata/images/hotel/square200/98439178.webp?k=ea15bd84b76d4f739642ff102c8b7beacc868dbdd98dbc1b5b061408aff83fbc&o="
-              class="img-fluid rounded-start"
-              alt="..."
-            />
-          </div>
-          <div class="col-8">
-            <div class="card-body">
-              <h5 class="card-title">Card title</h5>
-              <p class="card-text">This is a wider card with supporting text
-                below as a natural lead-in to additional content. This content
-                is a little bit longer.</p>
-              <p class="card-text"><small class="text-muted">Last updated 3 mins
-                  ago</small></p>
-            </div>
-
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="container-fluid">
-      <div class="card">
-        <div class="row">
-          <div class="col-4">
-            <img
-              src="https://cf.bstatic.com/xdata/images/hotel/square200/98439178.webp?k=ea15bd84b76d4f739642ff102c8b7beacc868dbdd98dbc1b5b061408aff83fbc&o="
-              class="img-fluid rounded-start"
-              alt="..."
-            />
-          </div>
-          <div class="col-8">
-            <div class="card-body">
-              <h5 class="card-title">Card title</h5>
-              <p class="card-text">This is a wider card with supporting text
-                below as a natural lead-in to additional content. This content
-                is a little bit longer.</p>
-              <p class="card-text"><small class="text-muted">Last updated 3 mins
-                  ago</small></p>
-            </div>
-
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="container-fluid">
-      <div class="card">
-        <div class="row">
-          <div class="col-4">
-            <img
-              src="https://cf.bstatic.com/xdata/images/hotel/square200/98439178.webp?k=ea15bd84b76d4f739642ff102c8b7beacc868dbdd98dbc1b5b061408aff83fbc&o="
-              class="img-fluid rounded-start"
-              alt="..."
-            />
-          </div>
-          <div class="col-8">
-            <div class="card-body">
-              <h5 class="card-title">Card title</h5>
-              <p class="card-text">This is a wider card with supporting text
-                below as a natural lead-in to additional content. This content
-                is a little bit longer.</p>
-              <p class="card-text"><small class="text-muted">Last updated 3 mins
-                  ago</small></p>
-            </div>
-
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="container-fluid">
-      <div class="card">
-        <div class="row">
-          <div class="col-4">
-            <img
-              src="https://cf.bstatic.com/xdata/images/hotel/square200/98439178.webp?k=ea15bd84b76d4f739642ff102c8b7beacc868dbdd98dbc1b5b061408aff83fbc&o="
-              class="img-fluid rounded-start"
-              alt="..."
-            />
-          </div>
-          <div class="col-8">
-            <div class="card-body">
-              <h5 class="card-title">Card title</h5>
-              <p class="card-text">This is a wider card with supporting text
-                below as a natural lead-in to additional content. This content
-                is a little bit longer.</p>
-              <p class="card-text"><small class="text-muted">Last updated 3 mins
-                  ago</small></p>
-            </div>
-
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="container-fluid">
-      <div class="card">
-        <div class="row">
-          <div class="col-4">
-            <img
-              src="https://cf.bstatic.com/xdata/images/hotel/square200/98439178.webp?k=ea15bd84b76d4f739642ff102c8b7beacc868dbdd98dbc1b5b061408aff83fbc&o="
-              class="img-fluid rounded-start"
-              alt="..."
-            />
-          </div>
-          <div class="col-8">
-            <div class="card-body">
-              <h5 class="card-title">Card title</h5>
-              <p class="card-text">This is a wider card with supporting text
-                below as a natural lead-in to additional content. This content
-                is a little bit longer.</p>
-              <p class="card-text"><small class="text-muted">Last updated 3 mins
-                  ago</small></p>
-            </div>
-
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="container-fluid">
-      <div class="card">
-        <div class="row">
-          <div class="col-4">
-            <img
-              src="https://cf.bstatic.com/xdata/images/hotel/square200/98439178.webp?k=ea15bd84b76d4f739642ff102c8b7beacc868dbdd98dbc1b5b061408aff83fbc&o="
-              class="img-fluid rounded-start"
-              alt="..."
-            />
-          </div>
-          <div class="col-8">
-            <div class="card-body">
-              <h5 class="card-title">Valentine Hotel Saigon - Bùi Viện Street
-              </h5>
-              <p class="card-text">This is a wider card with supporting text
-                below as a natural lead-in to additional content. This content
-                is a little bit longer.</p>
-              <p class="card-text"><small class="text-muted">Last updated 3 mins
-                  ago</small></p>
-            </div>
-
-          </div>
-        </div>
-      </div>
-    </div>
+    {{/each}}
+ 
+    {{/if}}
+    
+    
     <div class="container-fluid">
       <ul class="pagination">
       <li class="page-item"><a class="page-link">Previous</a></li>
-      <li class="page-item"><a class="page-link">1</a></li>
-      <li class="page-item"><a class="page-link">2</a></li>
+      <li class="page-item"><a class="page-link" href="/hotel?page=1">1</a></li>
+      <li class="page-item"><a class="page-link" href="/hotel?page=2">2</a></li>
       <li class="page-item"><a class="page-link">3</a></li>
       <li class="page-item"><a class="page-link">4</a></li>
       <li class="page-item"><a class="page-link">Next</a></li>
@@ -279,3 +68,48 @@
 
   </div>
 </div>
+<script>
+
+function filterSelection(c) {
+  var x, i;
+  x = document.getElementsByClassName("hotel-card");
+  if (c == "all") c = "";
+  for (i = 0; i < x.length; i++) {
+    w3RemoveClass(x[i], "show");
+    if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
+  }
+}
+
+function w3AddClass(element, name) {
+  var i, arr1, arr2;
+  arr1 = element.className.split(" ");
+  arr2 = name.split(" ");
+  for (i = 0; i < arr2.length; i++) {
+    if (arr1.indexOf(arr2[i]) == -1) {element.className += " " + arr2[i];}
+  }
+}
+
+function w3RemoveClass(element, name) {
+  var i, arr1, arr2;
+  arr1 = element.className.split(" ");
+  arr2 = name.split(" ");
+  for (i = 0; i < arr2.length; i++) {
+    while (arr1.indexOf(arr2[i]) > -1) {
+      arr1.splice(arr1.indexOf(arr2[i]), 1);     
+    }
+  }
+  element.className = arr1.join(" ");
+}
+
+
+// Add active class to the current button (highlight it)
+var btnContainer = document.getElementById("list-group");
+var btns = btnContainer.getElementsByClassName("list-group-item");
+for (var i = 0; i < btns.length; i++) {
+  btns[i].addEventListener("click", function(){
+    var current = document.getElementsByClassName("active");
+    current[0].className = current[0].className.replace(" active", "");
+    this.className += " active";
+  });
+}
+</script>

@@ -167,7 +167,15 @@ a {
 .hotel-wrapper {
     width: 70%;
 }
-
+.hotel-wrapper .hotel-card .card-text{
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.hotel-wrapper .hotel-card .card img{
+    height: 400px;
+    width: 100%;
+}
 .card {
     margin: 10px;
 }
@@ -184,11 +192,19 @@ a {
 
 
 /*Detail hotel*/
-
+ .detail .detail-container{
+     display: flex;
+ }
+ .detail .detail-container .tab-wrapper{
+     width: 70%;
+ }
 .reservation {
     width: 30%;
     float: right;
     margin-top: 40px;
+    
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    height: 400px;
 }
 
 .tab-wrapper {
@@ -591,5 +607,9 @@ a {
     font-size: 20px;
     font-weight: 700;
 }
-  
+
+.list-group-item.active {
+    background-color: #666;
+    color: white;
+  }
   
