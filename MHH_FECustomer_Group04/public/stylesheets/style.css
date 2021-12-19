@@ -30,15 +30,28 @@ a {
     padding: 10px 40px;
     font-weight: 500;
 }
-
+.navbar img{
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+}
+.navbar .name{
+    color: black;
+}
 .signin-button {
     float: right;
+    margin-left: 10px;
+    margin-right: 10px;
+    padding-left: 30px;
+    padding-right: 30px;
 }
 
 .signup-button {
     float: right;
     margin-left: 10px;
     margin-right: 10px;
+    padding-left: 30px;
+    padding-right: 30px;
 }
 
 .carousel-item img {
@@ -611,5 +624,12 @@ a {
 .list-group-item.active {
     background-color: #666;
     color: white;
-  }
+}
+
+/*****************Owner******************/
+.login-owner{
+    padding-top: 10%;
+    padding-left: 30%;
+    padding-right: 30%;
+}
   

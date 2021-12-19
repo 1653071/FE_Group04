@@ -1,90 +1,108 @@
-<div class="content">
-    <h1>Hotel</h1>
-     <button class="add-hotel btn btn-primary">Add new hotel</button>
+<div class="content hotel">
+  <h1>Hotel</h1>
+  <button
+    class="add-hotel btn btn-primary"
+    data-toggle="offcanvas"
+    data-target="#offcanvasRight"
+    aria-controls="offcanvasRight"
+  >Add new hotel</button>
+  <div class="container-fluid table-container">
     <table class="table">
-  <thead>
-    <tr>
-      <th scope="col">#</th>
-      <th scope="col">Name</th>
-      <th scope="col">Description</th>
-      <th scope="col"></th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th scope="row">1</th>
-      <td>Mark</td>
-      <td>Otto</td>
-      <td>@mdo</td>
-    </tr>
-    <tr>
-      <th scope="row">2</th>
-      <td>Jacob</td>
-      <td>Thornton</td>
-      <td>@fat</td>
-    </tr>
-    <tr>
-      <th scope="row">3</th>
-      <td colspan="2">Larry the Bird</td>
-      <td>@twitter</td>
-    </tr>
-    <tr>
-      <th scope="row">3</th>
-      <td colspan="2">Larry the Bird</td>
-      <td>@twitter</td>
-    </tr>
-    <tr>
-      <th scope="row">3</th>
-      <td colspan="2">Larry the Bird</td>
-      <td>@twitter</td>
-    </tr><tr>
-      <th scope="row">3</th>
-      <td colspan="2">Larry the Bird</td>
-      <td>@twitter</td>
-    </tr>
-    <tr>
-      <th scope="row">3</th>
-      <td colspan="2">Larry the Bird</td>
-      <td>@twitter</td>
-    </tr>
-    <tr>
-      <th scope="row">3</th>
-      <td colspan="2">Larry the Bird</td>
-      <td>@twitter</td>
-    </tr>
-    <tr>
-      <th scope="row">3</th>
-      <td colspan="2">Larry the Bird</td>
-      <td>@twitter</td>
-    </tr>
-    <tr>
-      <th scope="row">3</th>
-      <td colspan="2">Larry the Bird</td>
-      <td>@twitter</td>
-    </tr>
-    <tr>
-      <th scope="row">3</th>
-      <td colspan="2">Larry the Bird</td>
-      <td>@twitter</td>
-    </tr>
-    <tr>
-      <th scope="row">3</th>
-      <td colspan="2">Larry the Bird</td>
-      <td>@twitter</td>
-    </tr>
-  </tbody>
-</table>
-<nav aria-label="Page navigation example">
-  <ul class="pagination">
-    <li class="page-item"><a class="page-link" href="#">Previous</a></li>
-    <li class="page-item"><a class="page-link" href="#">1</a></li>
-    <li class="page-item"><a class="page-link" href="#">2</a></li>
-    <li class="page-item"><a class="page-link" href="#">3</a></li>
-    <li class="page-item"><a class="page-link" href="#">Next</a></li>
-  </ul>
-</nav>
+    <thead>
+      <tr>
+        <th scope="col">Name</th>
+        <th scope="col">Description</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      {{#if listExists}}
+        {{#each products}}
+          <tr>
+            <td style="">{{this.name}}</td>
+            <td class="cell-description">{{this.description}}</td>
+            <td>
+              <a href="/detail/{{this.id}}">
+                 <button
+                class="btn btn-primary"
+                type="href"
+                
+                
+              >View Detail</button>
+              </a>
+            </td>
+          </tr>
+        {{/each}}
+      {{/if}}
+    </tbody>
+  </table>
+  </div>
+  <nav aria-label="Page navigation example">
+    <ul class="pagination">
+      <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+      <li class="page-item"><a class="page-link" href="#">1</a></li>
+      <li class="page-item"><a class="page-link" href="#">2</a></li>
+      <li class="page-item"><a class="page-link" href="#">3</a></li>
+      <li class="page-item"><a class="page-link" href="#">Next</a></li>
+    </ul>
+  </nav>
 
-</div>
-<div class="footer">
-  <p>Group 04</p>
+  <div
+    class="offcanvas offcanvas-end"
+    tabindex="-1"
+    id="offcanvasRight"
+    aria-labelledby="offcanvasRightLabel"
+    style="width: 30%;"
+  >
+    <div class="offcanvas-header">
+      <h5 id="offcanvasRightLabel">Thông tin chi tiết</h5>
+      <button
+        type="button"
+        class="btn-close text-reset"
+        data-bs-dismiss="offcanvas"
+        aria-label="Close"
+      ></button>
+    </div>
+    <div class="offcanvas-body">
+      <form class="row gx-3 gy-2 align-items-center">
+        <div class="col-sm-12 col-xs-12">
+          <label
+            class="visually-hidden"
+            for="specificSizeInputName"
+          >{{product.name}}</label>
+          <input
+            type="text"
+            class="form-control"
+            id="specificSizeInputName"
+            placeholder="Jane Doe"
+          />
+        </div> 
+        <div class="col-sm-12 col-xs-12">
+          <label
+            class="visually-hidden"
+            for="specificSizeInputName"
+          >Address</label>
+          <input
+            type="text"
+            class="form-control"
+            id="specificSizeInputName"
+            placeholder="Jane Doe"
+          />
+        </div>
+        <div class="col-sm-12 col-xs-12">
+          <label
+            class="visually-hidden"
+            for="specificSizeInputName"
+          >Phone</label>
+          <input
+            type="text"
+            class="form-control"
+            id="specificSizeInputName"
+            placeholder="Jane Doe"
+          />
+        </div>
+        
+      </form>
+    </div>
+  </div>
 </div>

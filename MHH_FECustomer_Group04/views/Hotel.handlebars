@@ -32,7 +32,8 @@
     {{#if listExists}} 
    
     {{#each products}}
-     <div class="container-fluid hotel-card {{this.type}}" href="/hotel/{{this.id}}">
+     <a href="/hotel/{{this.id}}">    
+     <div class="container-fluid hotel-card {{this.type}}" >
       <div class="card">
         <div class="row">
           <div class="col-4">
@@ -50,6 +51,7 @@
         </div>
       </div>
     </div>
+    </a>
     {{/each}}
  
     {{/if}}

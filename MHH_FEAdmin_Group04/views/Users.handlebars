@@ -1,107 +1,77 @@
 <div class="content">
-     <h1>Hotel</h1>
-     <button class="add-hotel btn btn-primary">Add new hotel</button>
+  <h1>Hotel</h1>
+  <button class="add-hotel btn btn-primary">Add new hotel</button>
+  <div class="table-container">
     <table class="table">
-  <thead>
-    <tr>
-      <th scope="col">#</th>
-      <th scope="col">Name</th>
-      <th scope="col">Phone</th>
-      <th scope="col">Address</th>
-      <th scope="col">Gmail</th>
-      <th scope="col"></th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th scope="row">1</th>
-      <td>Mark</td>
-      <td>012923812</td>
-      <td>21 Hung Dao Street</td>
-      <td>...@gmail.com</td>
-      <td><button type="button" class="btn btn-warning">Ban</button>
-      <button type="button" class="btn btn-danger">Delete</button></td>
-    </tr>
-    <tr>
-      <th scope="row">1</th>
-      <td>Mark</td>
-      <td>012923812</td>
-      <td>21 Hung Dao Street</td>
-      <td>...@gmail.com</td>
-    </tr>
-    <tr>
-      <th scope="row">1</th>
-      <td>Mark</td>
-      <td>012923812</td>
-      <td>21 Hung Dao Street</td>
-      <td>...@gmail.com</td>
-    </tr>
-    <tr>
-      <th scope="row">1</th>
-      <td>Mark</td>
-      <td>012923812</td>
-      <td>21 Hung Dao Street</td>
-      <td>...@gmail.com</td>
-    </tr>
-    <tr>
-      <th scope="row">1</th>
-      <td>Mark</td>
-      <td>012923812</td>
-      <td>21 Hung Dao Street</td>
-      <td>...@gmail.com</td>
-    </tr>
-    <tr>
-      <th scope="row">1</th>
-      <td>Mark</td>
-      <td>012923812</td>
-      <td>21 Hung Dao Street</td>
-      <td>...@gmail.com</td>
-    </tr>
-    <tr>
-      <th scope="row">1</th>
-      <td>Mark</td>
-      <td>012923812</td>
-      <td>21 Hung Dao Street</td>
-      <td>...@gmail.com</td>
-    </tr>
-    <tr>
-      <th scope="row">1</th>
-      <td>Mark</td>
-      <td>012923812</td>
-      <td>21 Hung Dao Street</td>
-      <td>...@gmail.com</td>
-    </tr>
-    <tr>
-      <th scope="row">1</th>
-      <td>Mark</td>
-      <td>012923812</td>
-      <td>21 Hung Dao Street</td>
-      <td>...@gmail.com</td>
-    </tr>
-    <tr>
-      <th scope="row">1</th>
-      <td>Mark</td>
-      <td>012923812</td>
-      <td>21 Hung Dao Street</td>
-      <td>...@gmail.com</td>
-    </tr>
+      <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">Name</th>
+          <th scope="col">Phone</th>
 
-    
-  </tbody>
-</table>
-<nav aria-label="Page navigation example">
-  <ul class="pagination">
-    <li class="page-item"><a class="page-link" href="#">Previous</a></li>
-    <li class="page-item"><a class="page-link" href="#">1</a></li>
-    <li class="page-item"><a class="page-link" href="#">2</a></li>
-    <li class="page-item"><a class="page-link" href="#">3</a></li>
-    <li class="page-item"><a class="page-link" href="#">Next</a></li>
-  </ul>
-</nav>
+          <th scope="col"></th>
+        </tr>
+      </thead>
+      <tbody>
+        {{#if listExists}}
+          {{#each users1}}
+            <tr>
+              <th scope="row">1</th>
+              <td>{{this.name}}</td>
+              <td>{{this.username}}</td>
+              {{#if this.isEnabled}}
+                <td>
+                  <button
+                    class="btn btn-warning"
+                    onclick="putData()"
+                  >Ban</button>
+
+                  <button
+                    type="button"
+                    class="btn btn-danger"
+                  >Delete</button></td>
+              {{else}}
+                <td>
+                  <button
+                    type="button"
+                    class="btn btn-warning"
+                    onclick="unbannedUser()"
+                  >Unban</button>
+
+                  <button
+                    type="button"
+                    class="btn btn-danger"
+                  >Delete</button></td>
+              {{/if}}
+
+            </tr>
+          {{/each}}
+        {{/if}}
+
+      </tbody>
+    </table>
+  </div>
+  <nav aria-label="Page navigation example">
+    <ul class="pagination">
+      <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+      <li class="page-item"><a class="page-link" href="#">1</a></li>
+      <li class="page-item"><a class="page-link" href="#">2</a></li>
+      <li class="page-item"><a class="page-link" href="#">3</a></li>
+      <li class="page-item"><a class="page-link" href="#">Next</a></li>
+    </ul>
+  </nav>
 
 </div>
 
-</div>
-<div class="footer">
-  <p>Group 04</p>
-</div>
+<script>
+
+  async function putData() { try { const res = await
+  axios.put(`http://localhost:5001/begroup04-3faad/us-central1/app/users/banned/yW7WG5OnDIiV45gs2ZXl`);
+  resultElement.innerHTML = htmlizeResponse(result); } catch (err) {
+  resultElement.innerHTML = htmlizeResponse(err); } } async function
+  unbannedUser() { try { const res = await
+  axios.put(`http://localhost:5001/begroup04-3faad/us-central1/app/users/unbanned/yW7WG5OnDIiV45gs2ZXl`);
+  resultElement.innerHTML = htmlizeResponse(result); } catch (err) {
+  resultElement.innerHTML = htmlizeResponse(err); } }
+
+</script>

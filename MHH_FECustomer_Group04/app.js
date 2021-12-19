@@ -6,10 +6,14 @@ var logger = require('morgan');
 var session = require('express-session');
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
-
+var commentsRouter = require('./routes/comment');
+var ownerRouter = require('./routes/owner');
 var app = express();
 //Handlebars
 var expressHbs = require('express-handlebars');
+var bodyParser=require('body-parser');
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({extended: false}));
 app.use(session({
 	secret: 'secret',
 	resave: true,
@@ -33,11 +37,18 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
-
+app.use(function(req,res,next){
+  
+ 
+  res.locals.user=req.session.user;
+  res.locals.isLoggedin=req.session.user? true:false;
+  next();
+});
 
 app.use('/', indexRouter);
-app.use('/users', usersRouter);
-
+app.use('/user', usersRouter);
+app.use('/comment', commentsRouter);
+app.use('/owner', ownerRouter);
 // catch 404 and forward to error handler
 
 
