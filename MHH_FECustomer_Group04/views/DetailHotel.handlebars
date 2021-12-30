@@ -47,8 +47,8 @@
             <div class="col-auto">
               <button type="submit" class="btn btn-primary mb-3">Confirm
                 identity</button>
-               <input type="hidden" name="hotelId" value="{{product.id}}">
-              
+              <input type="hidden" name="hotelId" value="{{product.id}}" />
+
             </div>
           </div>
         </form>
@@ -91,12 +91,16 @@
       </div>
     </div>
     <div class="reservation">
-      <div class="card">
+     <form action="/booking/{{product.id}}">
+        <div class="card">
         <div class="card-header">
           $162 / night
         </div>
         <div class="card-body">
-          <p>Dates</p>
+          <p>Dates Start</p>
+          <input type="text" name="datestart">
+          <p>Dates End</p>
+          <input type="text" name="dateend">
           <p>Guest</p>
           <select class="form-select" aria-label="Default select example">
             <option selected>Open this select menu</option>
@@ -113,9 +117,13 @@
           </select>
         </div>
         <div class="card-footer">
-          <button class="book-button" href="/hotel/booking">Book</button>
+          <button class="btn btn-primary" type="submit">Book</a>
+          <input type="hidden" name="productname" value="{{product.name}}">
+          <input type="hidden" name="picture" value="{{product.picture}}">
+          <input type="hidden" name="id" value="{{product.id}}">
         </div>
       </div>
+     </form>
     </div>
   </div>
 </div>

@@ -10,6 +10,7 @@
 </ul>
   </div>
 </div>
+<form action="/payment" method="get">
 <div class="progress-content">
   <div class="booking-detail">
   <div class="card">
@@ -18,9 +19,9 @@
         <div class="card-title">Your detail</div>
         <div class="card-text">
           <p>Check in</p>
-          <p>13/01/2011</p>
+          <p>{{booking.datestart}}</p>
           <p>Check out</p>
-          <p>13/01/2011</p>
+          <p>{{booking.dateend}}</p>
         </div>
       </div>
     </div>
@@ -53,7 +54,7 @@
       </div>
       <div class="col-8">
         <div class="card-body">
-          <h5 class="card-title">Card title</h5>
+          <h5 class="card-title">{{booking.name}}</h5>
           <p class="card-text">This is a wider card with supporting text below
             as a natural lead-in to additional content. This content is a little
             bit longer.</p>
@@ -66,60 +67,37 @@
   <div class="card">
    <div class="card-body">
       <div class="card-title">Enter your detail</div>
+    
     <div class="mb-3">
-      <label for="exampleFormControlInput1" class="form-label">Email address</label>
+      <label for="exampleFormControlTextarea1" class="form-label">Email
+     </label>
       <input
-        type="email"
         class="form-control"
-        id="exampleFormControlInput1"
-        placeholder="name@example.com"
-      />
+        id="exampleFormControlTextarea1"
+        name="email"
+      ></input>
     </div>
     <div class="mb-3">
-      <label for="exampleFormControlTextarea1" class="form-label">Example
-        textarea</label>
-      <textarea
+      <label for="exampleFormControlTextarea1" class="form-label">FirstName
+        </label>
+      <input
         class="form-control"
         id="exampleFormControlTextarea1"
-        rows="3"
-      ></textarea>
+        name="firstname"
+      
+      ></input>
     </div>
     <div class="mb-3">
-      <label for="exampleFormControlTextarea1" class="form-label">Example
-        textarea</label>
-      <textarea
+      <label for="exampleFormControlTextarea1" class="form-label">LastName</label>
+      <input
         class="form-control"
         id="exampleFormControlTextarea1"
-        rows="3"
-      ></textarea>
+   
+        name="lastname"
+      ></input>
     </div>
     <div class="mb-3">
-      <label for="exampleFormControlTextarea1" class="form-label">Example
-        textarea</label>
-      <textarea
-        class="form-control"
-        id="exampleFormControlTextarea1"
-        rows="3"
-      ></textarea>
-    </div><div class="mb-3">
-      <label for="exampleFormControlTextarea1" class="form-label">Example
-        textarea</label>
-      <textarea
-        class="form-control"
-        id="exampleFormControlTextarea1"
-        rows="3"
-      ></textarea>
-    </div><div class="mb-3">
-      <label for="exampleFormControlTextarea1" class="form-label">Example
-        textarea</label>
-      <textarea
-        class="form-control"
-        id="exampleFormControlTextarea1"
-        rows="3"
-      ></textarea>
-    </div>
-    <div class="mb-3">
-      <button class="btn btn-primary">Next step</button>
+      <button type="submit" class="btn btn-primary">Payment</button>
     </div>
    </div>
   </div>
@@ -127,4 +105,5 @@
 </div>
 
 </div>
+</form>
 </div>

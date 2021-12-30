@@ -1,134 +1,151 @@
 <div class="container-fluid payment-wrapper">
-<div class="progressbar-wrapper">
-  <div class="progressbar-inner">
-    <ul class="progressbar">
-  <li class="complete">Step 1</li>
-  <li class="complete">Step 2</li>
-  <li class="active">Step 3</li>
-  
+  <div class="progressbar-wrapper">
+    <div class="progressbar-inner">
+      <ul class="progressbar">
+        <li class="complete">Step 1</li>
+        <li class="complete">Step 2</li>
+        <li class="active">Step 3</li>
 
-</ul>
+      </ul>
+    </div>
   </div>
-</div>
-<div class="progress-content">
-  <div class="booking-detail">
-  <div class="card">
-    <div class="card-header">
-      <div class="card-body">
-        <div class="card-title">Your detail</div>
-        <div class="card-text">
-          <p>Check in</p>
-          <p>13/01/2011</p>
-          <p>Check out</p>
-          <p>13/01/2011</p>
+  <div class="progress-content">
+    <div class="booking-detail">
+      <div class="card">
+        <div class="card-header">
+          <div class="card-body">
+            <div class="card-title">Your detail</div>
+            <div class="card-text">
+              <p>Check in</p>
+              <p>13/01/2011</p>
+              <p>Check out</p>
+              <p>13/01/2011</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="price-detail">
+        <div class="card">
+          <div class="card-header">
+            <div class="card-body">
+              <div class="card-title">Your price</div>
+              <div class="card-text">
+                <p>Price</p>
+                <p>20000000</p>
+                <p>VAT</p>
+                <p>10%</p>
+              </div>
+            </div>
+            <div class="card-footer">
+              <p>Price</p>
+            </div>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-  <div class="price-detail">
-  <div class="card">
-    <div class="card-header">
-      <div class="card-body">
-        <div class="card-title">Your price</div>
-        <div class="card-text">
-          <p>Price</p>
-          <p>20000000</p>
-          <p>VAT</p>
-          <p>10%</p>
+    <form action="/payment" method="post">
+      <div class="information-detail">
+
+        <div class="card">
+          <div class="row">
+            <div class="col-4">
+              <img
+                src="https://pearlriverhotel.vn/wp-content/uploads/2019/07/pearl-river-hotel-home1.jpg"
+                class="img-fluid rounded-start"
+                alt="..."
+              />
+            </div>
+            <div class="col-8">
+              <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">This is a wider card with supporting text
+                  below as a natural lead-in to additional content. This content
+                  is a little bit longer.</p>
+                <p class="card-text"><small class="text-muted">Last updated 3
+                    mins ago</small></p>
+              </div>
+
+            </div>
+          </div>
         </div>
-      </div>
-      <div class="card-footer">
-         <p>Price</p>
-      </div>
-    </div>
-  </div>
-</div>
-</div>
-<div class="information-detail">
+        <h4>Enter your info</h4>
+        <div class="card card-info">
+          <div class="card-body">
 
-  <div class="card ">
-    <div class="row">
-      <div class="col-4">
-        <img src="https://pearlriverhotel.vn/wp-content/uploads/2019/07/pearl-river-hotel-home1.jpg" class="img-fluid rounded-start" alt="..." />
-      </div>
-      <div class="col-8">
-        <div class="card-body">
-          <h5 class="card-title">Card title</h5>
-          <p class="card-text">This is a wider card with supporting text below
-            as a natural lead-in to additional content. This content is a little
-            bit longer.</p>
-          <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+            <div class="mb-3">
+              <label for="exampleFormControlInput1" class="form-label"><b
+                >Telephone</b></label>
+              <input
+                type="text"
+                class="form-control"
+                id="exampleFormControlInput1"
+                placeholder="name@example.com"
+              />
+            </div>
+            <div class="mb-3">
+              <label
+                for="exampleFormControlTextarea1"
+                class="form-label"
+              >Country/Region</label>
+              <textarea
+                class="form-control"
+                id="exampleFormControlTextarea1"
+                rows="3"
+              ></textarea>
+            </div>
+
+          </div>
+        </div>
+        <h4>Payment Info</h4>
+        <div class="card card-payment">
+          <div class="card-body">
+
+            <div class="mb-3">
+              <label for="exampleFormControlInput1" class="form-label"><b
+                >Telephone</b></label>
+              <input
+                type="text"
+                class="form-control"
+                id="exampleFormControlInput1"
+                placeholder="name@example.com"
+              />
+            </div>
+            <div class="mb-3">
+              <label
+                for="exampleFormControlTextarea1"
+                class="form-label"
+              >Country/Region</label>
+              <textarea
+                class="form-control"
+                id="exampleFormControlTextarea1"
+                rows="3"
+              ></textarea>
+            </div>
+
+          </div>
+        </div>
+        <h4>Card you want to pay ?</h4>
+        <div class="card card-payment">
+          <div class="card-body">
+
+            <div class="mb-3">
+              <label for="exampleFormControlInput1" class="form-label"><b>Card
+                  type</b></label>
+
+            </div>
+
+            <div class="mb-3">
+              <button class="payment-button btn btn-warning">Buy with
+                <i class="fa fa-cc-paypal"></i></button>
+            </div>
+            
+              <input type="submit" value="Buy" />
+      
+          </div>
         </div>
 
       </div>
-    </div>
-  </div>
-  <h4>Enter your info</h4>
-  <div class="card card-info">
-   <div class="card-body">
-      
-    <div class="mb-3">
-      <label for="exampleFormControlInput1" class="form-label"><b>Telephone</b></label>
-      <input
-        type="text"
-        class="form-control"
-        id="exampleFormControlInput1"
-        placeholder="name@example.com"
-      />
-    </div>
-    <div class="mb-3">
-      <label for="exampleFormControlTextarea1" class="form-label">Country/Region</label>
-      <textarea
-        class="form-control"
-        id="exampleFormControlTextarea1"
-        rows="3"
-      ></textarea>
-    </div>
-   
-   </div>
-  </div>
-  <h4>Payment Info</h4>
-  <div class="card card-payment">
-   <div class="card-body">
-      
-    <div class="mb-3">
-      <label for="exampleFormControlInput1" class="form-label"><b>Telephone</b></label>
-      <input
-        type="text"
-        class="form-control"
-        id="exampleFormControlInput1"
-        placeholder="name@example.com"
-      />
-    </div>
-    <div class="mb-3">
-      <label for="exampleFormControlTextarea1" class="form-label">Country/Region</label>
-      <textarea
-        class="form-control"
-        id="exampleFormControlTextarea1"
-        rows="3"
-      ></textarea>
-    </div>
-    
-    
-   </div>
-  </div>
-  <h4>Card you want to pay ?</h4>
-  <div class="card card-payment">
-   <div class="card-body">
-      
-    <div class="mb-3">
-      <label for="exampleFormControlInput1" class="form-label"><b>Card type</b></label>
-      
-    </div>
-   
-    
-    <div class="mb-3">
-      <button class="payment-button btn btn-warning">Buy with  <i class="fa fa-cc-paypal"></i></button>
-    </div>
-   </div>
-  </div>
-  
-</div>
+    </form>
 
-</div>
+  </div>
 </div>

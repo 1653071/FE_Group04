@@ -632,4 +632,45 @@ a {
     padding-left: 30%;
     padding-right: 30%;
 }
+
+.menu-owner{
+    background-color: #343a40;
+    height: 100%;
+    width: 20%;
+    float: left;
+  
+}
+.menu-owner .logo{
+    text-align: center;
+}
+.menu-owner ul li{
+    padding: 20px 10px;
+    text-align: center;
+    color: white;
+}
+.menu-owner ul li a{
+    
+    color: white;
+}
+.content-owner{
+    height: 100%;
+    width: 80%;
+    float: left;
+    padding-left: 20px;
+}
+.content-owner .hotels{
+    display: flex;
+}
+.content-owner .a{
+    float: left;
+    width: 100%;
+}
+.head-title{
+
+}
+.content-owner .hotels .hotel-card{
+   width: 30%;
+
+}
+
   
